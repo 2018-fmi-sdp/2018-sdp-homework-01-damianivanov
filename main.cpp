@@ -17,8 +17,9 @@ int main()
     char line[1000];
     char prompt[100] = ">";
     int registers[10] = {};
-    
-    while(true) {
+
+    while(true)
+    {
         cout << prompt << " ";
         cin.getline(line, 1000);
         if (strcmp(line, "quit") == 0) {
@@ -88,7 +89,7 @@ int main()
             
             int sum = registers[reg2] + registers[reg3];
             if (sum > 100 || sum < -100) {
-                cout << "ERROR" << endl;
+                cout << "ERROR: overflow" << endl;
                 continue; // next loop of the repl
             }
             
@@ -102,7 +103,8 @@ int main()
             
         } else {
             cout << "Unknown command " << line << endl; 
-        }
+         }
     }
     return 0;
 }
+//promqna na red 92 
