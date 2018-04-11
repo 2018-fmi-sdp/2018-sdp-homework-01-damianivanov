@@ -354,6 +354,12 @@ public:
 		}
 		val[(g - i) + 1]='\0';
 		int value = atoi ( val );
+		if ( value < -100 || value > 100 )
+		{
+			cout << "ERROR" << endl;
+			delete val;
+			return true;
+		}
 		arr[index] = value;
 		cout << "OK" << endl;
 		delete val;
